@@ -22,7 +22,7 @@
             <div class="col-lg-7">
                 <div class="hero-content">
                     {{-- <h2 class="text-white" data-aos="fade-up" data-aos-delay="80">Selamat datang di Campus Ease {{ config('app.name') }}</h2> --}}
-                    <h2 class="text-white" data-aos="fade-up" data-aos-delay="80">Selamat datang di Campus Ease</h2>
+                    <h2 class="text-white" data-aos="fade-up" data-aos-delay="80">Selamat datang di {{ web_settings('web', 'website_name') }}</h2>
                     <p data-aos="fade-up" data-aos-delay="90">{{ web_settings('web', 'home_quotes') }}</p>
                     <a href="{{route('landing-page.contact.index')}}" class="main-btn btn-gradient-yellow" data-aos="fade-up" data-aos-delay="100">Hubungi Kami</a>
                 </div>
