@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Gallery;
+namespace App\Http\Requests\DaftarUniversitas;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -42,7 +42,7 @@ class UpdateRequest extends FormRequest
         if (! $this->wantsJson()) {
             $errors = implode('<br>', $validator->errors()->all());
             alert()->html('Gagal',$errors,'error');
-            $this->redirect = route('dashboard.gallery.edit', request()->route()->parameter('id'));
+            $this->redirect = route('dashboard.daftaruniversitas.edit', request()->route()->parameter('id'));
         }
 
         parent::failedValidation($validator);

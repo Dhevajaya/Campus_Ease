@@ -5,18 +5,18 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Http\Requests\Gallery\StoreRequest;
-use App\Http\Requests\Gallery\UpdateRequest;
-use App\Models\Gallery;
+use App\Http\Requests\DaftarUniversitas\StoreRequest;
+use App\Http\Requests\DaftarUniversitas\UpdateRequest;
+use App\Models\DaftarUniversitas;
 use App\Helpers\UploadHelper;
 use Auth;
 
-class GalleryController extends Controller
+class DaftarUniversitasController extends Controller
 {
     public function __construct(){
-        $this->route = "dashboard.gallery.";
-        $this->view = "dashboard.pages.gallery.";
-        $this->gallery = new Gallery();
+        $this->route = "dashboard.daftaruniversitas.";
+        $this->view = "dashboard.pages.daftaruniversitas.";
+        $this->daftaruniversitas = new DaftarUniversitas();
     }
     
     /**
@@ -28,7 +28,7 @@ class GalleryController extends Controller
     {
         $search = $request->search;
 
-        $table = $this->gallery;
+        $table = $this->daftaruniversitas;
 
         if(!empty($search)){
             $table = $table->where(function($query2) use($search){
@@ -68,7 +68,7 @@ class GalleryController extends Controller
             $image = $request->file("image");
 
             if($image){
-                $upload = UploadHelper::upload_file($image,'gallery',['jpeg','jpg','png','gif']);
+                $upload = UploadHelper::upload_file($image,'daftaruniversitas',['jpeg','jpg','png','gif']);
 
                 if($upload["IsError"] == TRUE){
                     throw new Error($upload["Message"]);
@@ -77,7 +77,7 @@ class GalleryController extends Controller
                 $image = $upload["Path"];
             }
 
-            $create = $this->gallery->create([
+            $create = $this->daftaruniversitas->create([
                 'title' => $title,
                 'image' => $image,
             ]);
@@ -101,7 +101,7 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        $result = $this->gallery;
+        $result = $this->daftaruniversitas;
         $result = $result->where('id',$id);
         $result = $result->first();
 
@@ -125,7 +125,7 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        $result = $this->gallery;
+        $result = $this->daftaruniversitas;
         $result = $result->where('id',$id);
         $result = $result->first();
 
@@ -151,7 +151,7 @@ class GalleryController extends Controller
     public function update(UpdateRequest $request, $id)
     {
         try {
-            $result = $this->gallery;
+            $result = $this->daftaruniversitas;
             $result = $result->where('id',$id);
             $result = $result->first();
 
@@ -163,7 +163,7 @@ class GalleryController extends Controller
             $image = $request->file("image");
 
             if($image){
-                $upload = UploadHelper::upload_file($image,'gallery',['jpeg','jpg','png','gif']);
+                $upload = UploadHelper::upload_file($image,'daftaruniversitas',['jpeg','jpg','png','gif']);
 
                 if($upload["IsError"] == TRUE){
                     throw new Error($upload["Message"]);
@@ -200,7 +200,7 @@ class GalleryController extends Controller
     public function destroy($id)
     {
         try {
-            $result = $this->gallery;
+            $result = $this->daftaruniversitas;
             $result = $result->where('id',$id);
             $result = $result->first();
 

@@ -297,7 +297,7 @@ textarea.form_control {
 }
 
 .purple-dark {
-  background-color: #5956E9;
+  background-color: #003F8C;
 }
 
 .gray-light {
@@ -309,7 +309,7 @@ textarea.form_control {
 }
 
 .blue-dark-gradient {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(110.75deg, #1A0079 8.61%, #2F75FF 104.58%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(110.75deg, #003F8C 8.61%, #4095FB 104.58%);
 }
 
 .g-bg-one {
@@ -1010,17 +1010,17 @@ button {
 .header-navigation.breakpoint-on .navbar-close {
   display: block;
 }
-.header-navigation.breakpoint-on .header-right-nav ul li.nav-toggle-btn {
-  display: block;
-}
-.header-navigation .header-right-nav {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.header-navigation .header-right-nav ul li.nav-toggle-btn {
-  display: none;
-}
+  .header-navigation.breakpoint-on .header-right-nav ul li.nav-toggle-btn {
+    display: block;
+  }
+  .header-navigation .header-right-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header-navigation .header-right-nav ul li.nav-toggle-btn {
+    display: none;
+  }
 .header-navigation .navbar-toggler {
   padding: 0;
   border: none;
@@ -1030,14 +1030,14 @@ button {
 .header-navigation .navbar-toggler span {
   position: relative;
   background-color: #0A1426;
-  border-radius: 3px;
+  border-radius: 2px;
   display: block;
   height: 3px;
   margin-top: 5px;
   padding: 0;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
-  width: 30px;
+  width: 20px;
   cursor: pointer;
   display: block;
 }

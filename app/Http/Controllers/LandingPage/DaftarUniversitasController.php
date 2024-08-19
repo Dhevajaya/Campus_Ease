@@ -4,14 +4,14 @@ namespace App\Http\Controllers\LandingPage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Gallery;
+use App\Models\DaftarUniversitas;
 
-class GalleryController extends Controller
+class DaftarUniversitasController extends Controller
 {
     public function __construct(){
-        $this->route = "landing-page.gallery.";
-        $this->view = "landing-page.pages.gallery.";
-        $this->gallery = new Gallery();
+        $this->route = "landing-page.daftaruniversitas.";
+        $this->view = "landing-page.pages.daftaruniversitas.";
+        $this->daftaruniversitas = new DaftarUniversitas();
     }
 
     /**
@@ -21,7 +21,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $table = $this->gallery;
+        $table = $this->daftaruniversitas;
         $table = $table->orderBy("created_at","DESC");
         $table = $table->get();
 

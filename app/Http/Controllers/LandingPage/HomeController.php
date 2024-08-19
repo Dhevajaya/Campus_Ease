@@ -5,7 +5,7 @@ namespace App\Http\Controllers\LandingPage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Announcement;
-use App\Models\Gallery;
+use App\Models\DaftarUniversitas;
 use App\Models\Employee;
 
 class HomeController extends Controller
@@ -14,7 +14,7 @@ class HomeController extends Controller
         $this->route = "landing-page.home.";
         $this->view = "landing-page.pages.home.";
         $this->announcement = new Announcement();
-        $this->gallery = new Gallery();
+        $this->daftaruniversitas = new DaftarUniversitas();
         $this->employee = new Employee();
     }
 
@@ -30,10 +30,10 @@ class HomeController extends Controller
         $announcements = $announcements->limit(3);
         $announcements = $announcements->get();
 
-        $gallery = $this->gallery;
-        $gallery = $gallery->orderBy("created_at","DESC");
-        $gallery = $gallery->limit(3);
-        $gallery = $gallery->get();
+        $daftaruniversitas = $this->daftaruniversitas;
+        $daftaruniversitas = $daftaruniversitas->orderBy("created_at","DESC");
+        $daftaruniversitas = $daftaruniversitas->limit(3);
+        $daftaruniversitas = $daftaruniversitas->get();
 
         $employee = $this->employee;
         $employee = $employee->orderBy("created_at","DESC");
@@ -42,7 +42,7 @@ class HomeController extends Controller
 
         $data = [
             'announcements' => $announcements,
-            'gallery' => $gallery,
+            'daftaruniversitas' => $daftaruniversitas,
             'employee' => $employee,
         ];
 

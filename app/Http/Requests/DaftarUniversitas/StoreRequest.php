@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Gallery;
+namespace App\Http\Requests\DaftarUniversitas;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -44,7 +44,7 @@ class StoreRequest extends FormRequest
         if (! $this->wantsJson()) {
             $errors = implode('<br>', $validator->errors()->all());
             alert()->html('Gagal',$errors,'error');
-            $this->redirect = route('dashboard.file-public.create');
+            $this->redirect = route('dashboard.daftaruniversitas.create');
         }
 
         parent::failedValidation($validator);

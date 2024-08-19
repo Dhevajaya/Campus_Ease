@@ -74,14 +74,14 @@ Route::group(['middleware' => ['auth', 'dashboard.access','verified:dashboard.au
 		Route::get('/{id}/impersonate', 'UserController@impersonate')->name("impersonate")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN])]);
 	});
 
-	Route::group(["as" => "gallery.","prefix" => "gallery"], function () {
-		Route::get('/', 'GalleryController@index')->name("index");
-		Route::get('/create', 'GalleryController@create')->name("create");
-		Route::get('/{id}', 'GalleryController@show')->name("show");
-		Route::get('/{id}/edit', 'GalleryController@edit')->name("edit");
-		Route::post('/', 'GalleryController@store')->name("store");
-		Route::put('/{id}', 'GalleryController@update')->name("update");
-		Route::delete('/{id}', 'GalleryController@destroy')->name("destroy");
+	Route::group(["as" => "daftaruniversitas.","prefix" => "daftaruniversitas"], function () {
+		Route::get('/', 'DaftarUniversitasController@index')->name("index");
+		Route::get('/create', 'DaftarUniversitasController@create')->name("create");
+		Route::get('/{id}', 'DaftarUniversitasController@show')->name("show");
+		Route::get('/{id}/edit', 'DaftarUniversitasController@edit')->name("edit");
+		Route::post('/', 'DaftarUniversitasController@store')->name("store");
+		Route::put('/{id}', 'DaftarUniversitasController@update')->name("update");
+		Route::delete('/{id}', 'DaftarUniversitasController@destroy')->name("destroy");
 	});
 
 	Route::group(["as" => "faq.","prefix" => "faq"], function () {

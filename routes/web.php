@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LandingPage\DaftarUniversitas;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,9 +30,10 @@ Route::group(["namespace" => "App\Http\Controllers\LandingPage" , "as" => "landi
 		Route::post('/', 'ContactController@store')->name("store");
 	});
 
-	Route::group(["as" => "gallery.","prefix" => "gallery"], function () {
-		Route::get('/', 'GalleryController@index')->name("index");
+	Route::group(["as" => "daftaruniversitas.","prefix" => "daftaruniversitas"], function () {
+		Route::get('/', 'DaftarUniversitasController@index')->name("index");
 	});
+
 
 	Route::group(["as" => "faq.","prefix" => "faq"], function () {
 		Route::get('/', 'FaqController@index')->name("index");

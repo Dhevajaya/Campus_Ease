@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @foreach ($gallery as $index => $row)
+            @foreach ($daftaruniversitas as $index => $row)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="block-style-one block-icon-animate animated-hover-icon mb-40" data-aos="fade-up" data-aos-delay="30">
                     <a class="image-popup" href="{{asset('storage/'.$row->image)}}">
@@ -117,7 +117,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="{{route('landing-page.gallery.index')}}" class="main-btn btn-blue-dark">Lihat Semua Galeri</a>
+                <a href="{{route('landing-page.daftaruniversitas.index')}}" class="main-btn btn-blue-dark">Lihat Semua Galeri</a>
             </div>
         </div>
     </div>

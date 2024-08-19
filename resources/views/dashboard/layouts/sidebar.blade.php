@@ -66,9 +66,9 @@
                     \App\Enums\RoleEnum::ADMINISTRATOR,
                 ]))
                 <li>
-                    <a href="{{ route('dashboard.gallery.index') }}" class="waves-effect">
+                    <a href="{{ route('dashboard.daftaruniversitas.index') }}" class="waves-effect">
                         <i class="fa fa-image"></i>
-                        <span> Galeri</span>
+                        <span> Daftar Universitas</span>
                     </a>
                 </li>
                 @endif

@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","Gallery")
+@section("title","Daftar Universitas")
 
 @section("css")
 @endsection
@@ -10,11 +10,11 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Gallery</a></li>
-                <li class="breadcrumb-item active">Gallery</li>
+                <li class="breadcrumb-item"><a href="#">Daftar Universitas</a></li>
+                <li class="breadcrumb-item active">Daftar Universitas</li>
             </ol>
         </div>
-        <h5 class="page-title">Gallery</h5>
+        <h5 class="page-title">Daftar Universitas</h5>
     </div>
 </div>
 @endsection
@@ -26,9 +26,9 @@
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-lg-12">
-                        <a href="{{route('dashboard.gallery.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
+                        <a href="{{route('dashboard.daftaruniversitas.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
                         <a href="#" class="btn btn-success btn-filter"><i class="fa fa-filter"></i> Fiter</a>
-                        <a href="{{route('dashboard.gallery.index')}}" class="btn btn-warning"><i class="fa fa-refresh"></i> Refresh</a>
+                        <a href="{{route('dashboard.daftaruniversitas.index')}}" class="btn btn-warning"><i class="fa fa-refresh"></i> Refresh</a>
                     </div>
                 </div>
                 <div class="row">
@@ -53,8 +53,8 @@
                                         <td>{{date('d-m-Y H:i:s',strtotime($row->created_at))}}</td>
                                         <td>
                                             <div class="d-flex mb-1">
-                                                <a href="{{route('dashboard.gallery.show',$row->id)}}" class="btn btn-success btn-sm mr-1"><i class="fa fa-address-card"></i> Detail</a>
-                                                <a href="{{route('dashboard.gallery.edit',$row->id)}}" class="btn btn-primary btn-sm mr-1"><i class="fa fa-edit"></i> Edit</a>
+                                                <a href="{{route('dashboard.daftaruniversitas.show',$row->id)}}" class="btn btn-success btn-sm mr-1"><i class="fa fa-address-card"></i> Detail</a>
+                                                <a href="{{route('dashboard.daftaruniversitas.edit',$row->id)}}" class="btn btn-primary btn-sm mr-1"><i class="fa fa-edit"></i> Edit</a>
                                                 <a href="#" class="btn btn-danger btn-sm mr-1 btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i> Hapus</a>
                                             </div>
                                         </td>
@@ -75,7 +75,7 @@
     </div>
 </div>
 
-@include("dashboard.pages.gallery.modal.index")
+@include("dashboard.pages.daftaruniversitas.modal.index")
 
 <form id="frmDelete" method="POST">
     @csrf
@@ -97,7 +97,7 @@
         $(document).on("click",".btn-delete",function(){
             let id = $(this).data("id");
             if(confirm("Apakah anda yakin ingin menghapus data ini ?")){
-                $("#frmDelete").attr("action", "{{ route('dashboard.gallery.destroy', '_id_') }}".replace("_id_", id));
+                $("#frmDelete").attr("action", "{{ route('dashboard.daftaruniversitas.destroy', '_id_') }}".replace("_id_", id));
                 $("#frmDelete").find('input[name="id"]').val(id);
                 $("#frmDelete").submit();
             }

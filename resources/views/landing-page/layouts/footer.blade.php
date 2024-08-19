@@ -24,7 +24,7 @@
                         <div class="widget footer-nav-widget mb-40">
                             <h4 class="widget-title">Link Cepat</h4>
                             <ul class="footer-nav">
-                                <li><a href="{{route('landing-page.gallery.index')}}">Galeri</a></li>
+                                <li><a href="{{route('landing-page.daftaruniversitas.index')}}">Daftar Universitas</a></li>
                                 <li><a href="{{route('landing-page.achievements.index')}}">Prestasi</a></li>
                                 <li><a href="{{route('landing-page.employees.index')}}">Guru</a></li>
                                 <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>

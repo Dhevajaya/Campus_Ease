@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","Gallery")
+@section("title","Daftar Universitas")
 
 @section("css")
 @endsection
@@ -10,12 +10,12 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Gallery</a></li>
+                <li class="breadcrumb-item"><a href="#">Daftar Universitas</a></li>
                 <li class="breadcrumb-item">Show</li>
                 <li class="breadcrumb-item active">{{$result->id}}</li>
             </ol>
         </div>
-        <h5 class="page-title">Gallery</h5>
+        <h5 class="page-title">Daftar Universitas</h5>
     </div>
 </div>
 @endsection
@@ -25,7 +25,7 @@
     <div class="col-xl-12">
         <div class="card m-b-30">
             <div class="card-body">
-                <h5 class="card-title mb-3">Informasi Gallery</h5>
+                <h5 class="card-title mb-3">Daftar Universitas</h5>
 
                 <div class="row mb-2">
                     <div class="col-md-3">
@@ -64,8 +64,8 @@
                 </div>
 
                 <div class="mt-5">
-                    <a href="{{route('dashboard.gallery.index')}}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
-                    <a href="{{route('dashboard.gallery.edit',$result->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
+                    <a href="{{route('dashboard.daftaruniversitas.index')}}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+                    <a href="{{route('dashboard.daftaruniversitas.edit',$result->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
                     <a href="#" class="btn btn-danger btn-sm btn-delete"><i class="fa fa-trash"></i> Hapus</a>
                 </div>
 
@@ -86,7 +86,7 @@
 
         $(document).on("click",".btn-delete",function(){
             if(confirm("Apakah anda yakin ingin menghapus data ini ?")){
-                $("#frmDelete").attr("action", "{{ route('dashboard.gallery.destroy', '_id_') }}".replace("_id_", '{{$result->id}}'));
+                $("#frmDelete").attr("action", "{{ route('dashboard.daftaruniversitas.destroy', '_id_') }}".replace("_id_", '{{$result->id}}'));
                 $("#frmDelete").submit();
             }
         })

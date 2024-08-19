@@ -1,6 +1,6 @@
 @extends("landing-page.layouts.main")
 
-@section("title","Gallery")
+@section("title","Daftar Universitas")
 
 @section("css")
 @endsection
@@ -21,10 +21,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="page-title-text text-center">
-                        <h1 class="title">Gallery</h1>
+                        <h1 class="title">Daftar Universitas</h1>
                         <ul class="breadcrumbs-link">
                             <li><a href="{{route('landing-page.home.index')}}">Beranda</a></li>
-                            <li class="active">Gallery</li>
+                            <li class="active">Daftar Universitas</li>
                         </ul>
                     </div>
                 </div>
