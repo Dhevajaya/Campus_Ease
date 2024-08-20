@@ -32,6 +32,7 @@ Route::group(["namespace" => "App\Http\Controllers\LandingPage" , "as" => "landi
 
 	Route::group(["as" => "daftaruniversitas.","prefix" => "daftaruniversitas"], function () {
 		Route::get('/', 'DaftarUniversitasController@index')->name("index");
+		Route::get('/{id}', 'DaftarUniversitasController@show')->name("show");
 	});
 
 

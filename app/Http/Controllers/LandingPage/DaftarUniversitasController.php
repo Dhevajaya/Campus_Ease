@@ -59,17 +59,30 @@ class DaftarUniversitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id){
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        $result = $this->daftaruniversitas;
+        $result = $result->where('id',$id);
+        $result = $result->first();
+
+        $except_result = $this->daftaruniversitas;
+        $except_result = $except_result->where('id','!=',$id);
+        $except_result = $except_result->orderBy("date","DESC");      //sort descending by time created data
+      
+
+        if(!$result){
+            alert()->error('Gagal',"Data tidak ditemukan");
+            return redirect()->route($this->route."index");
+        }
+
+        $data = [
+            'result' => $result,
+           
+        ];
+        //view count in show daftaruniversitas
+
+        return view($this->view."show",$data);
+    }
     public function edit($id)
     {
         //

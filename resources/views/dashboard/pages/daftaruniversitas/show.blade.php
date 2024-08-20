@@ -38,6 +38,14 @@
 
                 <div class="row mb-2">
                     <div class="col-md-3">
+                        Deskripsi
+                    </div>
+                    <div class="col-md-8">
+                        : {!! $result->trixRender('content') !!}
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-3">
                         Image
                     </div>
                     <div class="col-md-8">

@@ -42,7 +42,7 @@
                     <a class="image-popup" href="{{asset('storage/'.$row->image)}}" style="width: 100%;height:200px;">
                         <img src="{{asset('storage/'.$row->image)}}" alt="{{$row->title}}" style="width: 100%;height:100%;">
                     </a>
-                    <p class="text-center mt-1">{{$row->title}}</p>
+                    <a href="{{route('landing-page.daftaruniversitas.show', $row->id)}}"> <p class="text-center mt-1">{{$row->title}}</p></a><p class="text-center mt-1">{{$row->title}}</p>
                 </div>
             </div>
             @endforeach

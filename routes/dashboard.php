@@ -74,14 +74,14 @@ Route::group(['middleware' => ['auth', 'dashboard.access','verified:dashboard.au
 		Route::get('/{id}/impersonate', 'UserController@impersonate')->name("impersonate")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN])]);
 	});
 
-	Route::group(["as" => "daftaruniversitas.","prefix" => "daftaruniversitas"], function () {
-		Route::get('/', 'DaftarUniversitasController@index')->name("index");
-		Route::get('/create', 'DaftarUniversitasController@create')->name("create");
-		Route::get('/{id}', 'DaftarUniversitasController@show')->name("show");
-		Route::get('/{id}/edit', 'DaftarUniversitasController@edit')->name("edit");
-		Route::post('/', 'DaftarUniversitasController@store')->name("store");
-		Route::put('/{id}', 'DaftarUniversitasController@update')->name("update");
-		Route::delete('/{id}', 'DaftarUniversitasController@destroy')->name("destroy");
+	Route::group(["as" => "announcements.","prefix" => "announcements"], function () {
+		Route::get('/', 'AnnouncementController@index')->name("index")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/create', 'AnnouncementController@create')->name("create")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/{id}', 'AnnouncementController@show')->name("show")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/{id}/edit', 'AnnouncementController@edit')->name("edit")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::post('/', 'AnnouncementController@store')->name("store")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::put('/{id}', 'AnnouncementController@update')->name("update")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::delete('/{id}', 'AnnouncementController@destroy')->name("destroy")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
 	});
 
 	Route::group(["as" => "faq.","prefix" => "faq"], function () {
@@ -104,14 +104,14 @@ Route::group(['middleware' => ['auth', 'dashboard.access','verified:dashboard.au
 		Route::delete('/{id}', 'PageController@destroy')->name("destroy")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
 	});
 
-	Route::group(["as" => "announcements.","prefix" => "announcements"], function () {
-		Route::get('/', 'AnnouncementController@index')->name("index")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::get('/create', 'AnnouncementController@create')->name("create")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::get('/{id}', 'AnnouncementController@show')->name("show")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::get('/{id}/edit', 'AnnouncementController@edit')->name("edit")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::post('/', 'AnnouncementController@store')->name("store")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::put('/{id}', 'AnnouncementController@update')->name("update")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
-		Route::delete('/{id}', 'AnnouncementController@destroy')->name("destroy")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+	Route::group(["as" => "daftaruniversitas.","prefix" => "daftaruniversitas"], function () {
+		Route::get('/', 'DaftarUniversitasController@index')->name("index")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/create', 'DaftarUniversitasController@create')->name("create")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/{id}', 'DaftarUniversitasController@show')->name("show")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::get('/{id}/edit', 'DaftarUniversitasController@edit')->name("edit")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::post('/', 'DaftarUniversitasController@store')->name("store")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::put('/{id}', 'DaftarUniversitasController@update')->name("update")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
+		Route::delete('/{id}', 'DaftarUniversitasController@destroy')->name("destroy")->middleware(['role:' . implode('|', [RoleEnum::SUPERADMIN,RoleEnum::ADMINISTRATOR])]);
 	});
 
 	Route::group(["as" => "employees.","prefix" => "employees"], function () {

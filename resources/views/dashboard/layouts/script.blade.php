@@ -25,6 +25,10 @@
 <!-- Select2 -->
 <script src="{{URL::to('/')}}/templates/dashboard/assets/plugins/bootstrap-select2/select2.min.js"></script>
 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
+
+
 <script>
     $(function(){
         if($('.select2').length >= 1){

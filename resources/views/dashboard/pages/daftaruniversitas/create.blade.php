@@ -20,6 +20,7 @@
 </div>
 @endsection
 
+
 @section("content")
 <div class="row">
     <div class="col-xl-12">
@@ -33,6 +34,14 @@
                                 <label class="col-md-2 col-form-label">Judul <span class="text-danger">*</span></label>
                                 <div class="col-md-10">
                                     <input type="text" class="form-control" name="title" placeholder="Judul"  value="{{old('title')}}" required>
+                                </div>
+                            </div>
+                         
+                            <div class="form-group row mb-5">
+                                <label class="col-md-2 col-form-label" for="description">Deskripsi <span
+                                        class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    @trix(\App\Models\DaftarUniversitas::class, 'content')
                                 </div>
                             </div>
                             <div class="form-group row">

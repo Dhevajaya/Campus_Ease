@@ -5,7 +5,7 @@
         @include("dashboard.layouts.head")
         {{-- End Head --}}
     </head>
-
+    @trixassets
 
     <body class="fixed-left">
 

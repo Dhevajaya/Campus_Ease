@@ -18,6 +18,10 @@ class UpdateRequest extends FormRequest
                 'max:2048',
                 'mimes:jpeg,bmp,png,gif,svg,jpg',
             ],
+            'daftaruniversitas-trixFields' => [
+                'required',
+                'array',
+            ],
         ];
     }
 

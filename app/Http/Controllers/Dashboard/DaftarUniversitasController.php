@@ -80,6 +80,7 @@ class DaftarUniversitasController extends Controller
             $create = $this->daftaruniversitas->create([
                 'title' => $title,
                 'image' => $image,
+                'daftaruniversitas-trixFields' => $request->input('daftaruniversitas-trixFields'),
             ]);
 
             alert()->html('Berhasil','Data berhasil ditambahkan','success'); 
@@ -178,6 +179,7 @@ class DaftarUniversitasController extends Controller
             $result->update([
                 'title' => $title,
                 'image' => $image,
+                'daftaruniversitas-trixFields' => $request->input('daftaruniversitas-trixFields'),
             ]);
 
             alert()->html('Berhasil','Data berhasil diubah','success'); 
