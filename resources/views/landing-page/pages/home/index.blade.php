@@ -12,7 +12,7 @@
 
 @section("content")
 <!--====== Start Hero Section ======-->
-<section class="hero-area hero-style-three bg_cover" style="background-image: url({{URL::to('/')}}/templates/landing-page/assets/images/hero/hero-bg-2.png);">
+<section class="hero-area hero-style-three bg_cover" style="background-image: url({{URL::to('/')}}/templates/landing-page/assets/images/hero/bg.png);">
     <div class="shape shape-one scene"><span data-depth="3"></span></div>
     <div class="shape shape-two scene"><span data-depth="5"></span></div>
     <div class="shape shape-three scene"><span data-depth="4"></span></div>

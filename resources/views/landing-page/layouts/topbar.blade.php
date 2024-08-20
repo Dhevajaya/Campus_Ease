@@ -4,7 +4,7 @@
         <div class="container">
             <div class="primary-menu">
                 <div class="site-branding ">
-                    <a href="{{route('landing-page.home.index')}}" class="brand-logo"><img src="{{ asset('storage/'.web_settings('web', 'website_logo'))}}" alt="Site Logo" style="width: 200px;height:50px;"></a>
+                    <a href="{{route('landing-page.home.index')}}" class="brand-logo"><img src="{{ asset('storage/'.web_settings('web', 'website_logo'))}}" alt="Site Logo" style="width: 170px;height:auto;"></a>
                 </div>
                 <div class="nav-menu nav-ml-auto">
                     <!-- Navbar logo -->

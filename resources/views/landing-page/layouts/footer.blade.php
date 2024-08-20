@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget about-widget mb-40" data-aos="fade-up" data-aos-delay="30">
                         <div class="site-branding">
-                            <a href="index.html"><img src="{{ asset('storage/'.web_settings('web', 'website_logo_dark'))}}" alt="Site Logo" style="width: 200px;height:50px;"></a>
+                            <a href="index.html"><img src="{{ asset('storage/'.web_settings('web', 'website_logo_dark'))}}" alt="Site Logo" style="width: 170px;height:auto;"></a>
                         </div>
                         <p>{{ web_settings('web', 'website_description') }}</p>
                     </div>

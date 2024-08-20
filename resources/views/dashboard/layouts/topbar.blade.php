@@ -2,7 +2,7 @@
 
     <div class="topbar-left	d-none d-lg-block">
         <div class="text-center " >
-            <a href="{{route('dashboard.dashboard.index')}}" class="logo"><img src="{{ asset('storage/'.web_settings('web', 'website_logo'))}}" height="20" alt="logo"></a>
+            <a href="{{route('dashboard.dashboard.index')}}" class="logo"><img src="{{ asset('storage/'.web_settings('web', 'website_logo'))}}" style="width: 140px;height:auto;" alt="logo"></a>
         </div>
     </div>
 

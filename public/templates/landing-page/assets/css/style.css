@@ -231,7 +231,7 @@ ul.social-link li {
 
 .bg_cover {
   background-position: center center;
-  background-size: cover;
+  background-size:;
   background-repeat: no-repeat;
 }
 
@@ -1445,14 +1445,14 @@ button {
   margin-bottom: 40px;
 }
 .hero-style-three .hero-img img {
-  max-width: 635px;
+  max-width: 400px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero-style-three .hero-img img {
     max-width: 100%;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 800px) {
   .hero-style-three .hero-img img {
     max-width: 100%;
   }
