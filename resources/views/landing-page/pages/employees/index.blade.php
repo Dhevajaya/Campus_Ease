@@ -21,10 +21,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="page-title-text text-center">
-                        <h1 class="title">Tenaga Pendidik dan Pegawai</h1>
+                        <h1 class="title">Tim Pengembang</h1>
                         <ul class="breadcrumbs-link">
                             <li><a href="{{route('landing-page.home.index')}}">Beranda</a></li>
-                            <li class="active">Tenaga Pendidik dan Pegawai</li>
+                            <li class="active">Tim Pengembang</li>
                         </ul>
                     </div>
                 </div>

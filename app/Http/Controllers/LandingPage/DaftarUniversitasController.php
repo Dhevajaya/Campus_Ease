@@ -77,7 +77,7 @@ class DaftarUniversitasController extends Controller
 
         $data = [
             'result' => $result,
-           
+            'except_result' => $except_result,
         ];
         //view count in show daftaruniversitas
 

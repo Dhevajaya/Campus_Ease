@@ -99,7 +99,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center mb-55" data-aos="fade-up">
-                    <h2>Galeri Kegiatan</h2>
+                    <h2>Daftar Universitas</h2>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="{{route('landing-page.daftaruniversitas.index')}}" class="main-btn btn-blue-dark">Lihat Semua Galeri</a>
+                <a href="{{route('landing-page.daftaruniversitas.index')}}" class="main-btn btn-blue-dark">Lihat Semua Universitas</a>
             </div>
         </div>
     </div>
@@ -128,7 +128,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center mb-55" data-aos="fade-up">
-                    <h2>Tenaga Pendidik dan Karyawan</h2>
+                    <h2>Tim Pengembang</h2>
                 </div>
             </div>
         </div>
@@ -152,7 +152,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="{{route('landing-page.employees.index')}}" class="main-btn btn-blue-dark">Lihat Semua Guru</a>
+                <a href="{{route('landing-page.employees.index')}}" class="main-btn btn-blue-dark">Lihat Semua Anggota</a>
             </div>
         </div>
     </div>
