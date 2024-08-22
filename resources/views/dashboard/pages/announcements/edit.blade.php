@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-2 col-form-label">Tanggal Pengumuman <span class="text-danger">*</span></label>
+                                <label class="col-md-2 col-form-label">Tanggal Beasiswa<span class="text-danger">*</span></label>
                                 <div class="col-md-10">
                                     <input type="date" class="form-control"name="date" value="{{old('date',$result->date)}}" required>
                                 </div>

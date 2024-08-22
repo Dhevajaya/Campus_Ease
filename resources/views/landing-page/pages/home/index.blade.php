@@ -62,7 +62,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center mb-55" data-aos="fade-up">
-                    <h2>Pengumuman</h2>
+                    <h2>Beasiswa</h2>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
         </div>
         <div class="row mt-3">
             <div class="col-12 text-center">
-                <a href="{{route('landing-page.announcements.index')}}" class="main-btn btn-blue-dark">Lihat Semua Pengumuman</a>
+                <a href="{{route('landing-page.announcements.index')}}" class="main-btn btn-blue-dark">Lihat Semua Beasiswa</a>
             </div>
         </div>
     </div>

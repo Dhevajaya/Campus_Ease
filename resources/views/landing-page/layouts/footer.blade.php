@@ -26,10 +26,10 @@
                             <ul class="footer-nav">
                                 <li><a href="{{route('landing-page.daftaruniversitas.index')}}">Daftar Universitas</a></li>
                                 <li><a href="{{route('landing-page.achievements.index')}}">Prestasi</a></li>
-                                <li><a href="{{route('landing-page.employees.index')}}">Guru</a></li>
+                                <li><a href="{{route('landing-page.employees.index')}}">Tim Pengembang</a></li>
                                 <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>
                                 <li><a href="{{route('landing-page.file-public.index')}}">File Publik</a></li>
-                                <li><a href="{{route('landing-page.announcements.index')}}">Pengumuman</a></li>
+                                <li><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li>
                                 <li><a href="{{route('landing-page.pages.index','privacy-policy')}}">Privacy Policy</a></li>
                                 <li><a href="{{route('landing-page.pages.index','term-and-conditions')}}">Terms and Conditions</a></li>
                             </ul>
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text text-center">
-                        <p>© {{ date('Y') }} <b>{{ config('app.name') }}.</b></p>
+                        <p>© {{ date('Y') }} <b>Campus Ease.</b></p>
                     </div>
                 </div>
             </div>
