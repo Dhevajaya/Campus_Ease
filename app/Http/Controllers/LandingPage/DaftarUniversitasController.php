@@ -67,8 +67,8 @@ class DaftarUniversitasController extends Controller
 
         $except_result = $this->daftaruniversitas;
         $except_result = $except_result->where('id','!=',$id);
-        $except_result = $except_result->orderBy("date","DESC");      //sort descending by time created data
-      
+        $except_result = $except_result->orderBy("created_at","DESC");      //sort descending by time created data
+        $except_result = $except_result->paginate(3);   //limit paginate only 10 data appears per load
 
         if(!$result){
             alert()->error('Gagal',"Data tidak ditemukan");

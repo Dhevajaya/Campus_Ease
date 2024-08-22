@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","Announcement")
+@section("title","Beasiswa")
 
 @section("css")
 @endsection
@@ -10,12 +10,12 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Announcement</a></li>
+                <li class="breadcrumb-item"><a href="#">Beasiswa</a></li>
                 <li class="breadcrumb-item">Show</li>
                 <li class="breadcrumb-item active">{{$result->id}}</li>
             </ol>
         </div>
-        <h5 class="page-title">Announcement</h5>
+        <h5 class="page-title">Beasiswa</h5>
     </div>
 </div>
 @endsection
@@ -25,7 +25,7 @@
     <div class="col-xl-12">
         <div class="card m-b-30">
             <div class="card-body">
-                <h5 class="card-title mb-3">Informasi Pengumuman</h5>   
+                <h5 class="card-title mb-3">Informasi Beasiswa</h5>   
 
                 <div class="row mb-2">
                     <div class="col-md-3">

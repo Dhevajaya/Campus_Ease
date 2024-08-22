@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","Announcement")
+@section("title","Beasiswa")
 
 @section("css")
 <!-- Datetime picker -->
@@ -12,12 +12,12 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Announcement</a></li>
+                <li class="breadcrumb-item"><a href="#">Beasiswa</a></li>
                 <li class="breadcrumb-item">Edit</li>
                 <li class="breadcrumb-item active">{{$result->id}}</li>
             </ol>
         </div>
-        <h5 class="page-title">Announcement</h5>
+        <h5 class="page-title">Beasiswa</h5>
     </div>
 </div>
 @endsection

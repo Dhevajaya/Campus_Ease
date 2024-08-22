@@ -118,7 +118,7 @@
                 <li>
                     <a href="{{route('dashboard.announcements.index')}}" class="waves-effect">
                         <i class="fa fa-bullhorn"></i>
-                        <span> Pengumuman</span>
+                        <span> Beasiswa</span>
                     </a>
                 </li>
                 @endif

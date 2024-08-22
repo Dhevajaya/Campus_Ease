@@ -18,13 +18,14 @@
                         <ul>
                             <li class="menu-item"><a href="{{route('landing-page.home.index')}}">Home</a></li>
                             <li class="menu-item"><a href="{{route('landing-page.daftaruniversitas.index')}}">Daftar Universitas</a></li>
-                            <li class="menu-item"><a href="{{route('landing-page.achievements.index')}}">Cari Universitas</a></li>
+                            <li class="menu-item"><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li>
+                            {{-- <li class="menu-item"><a href="{{route('landing-page.achievements.index')}}">Cari Universitas</a></li> --}}
                             <li class="menu-item"><a href="{{route('landing-page.contact.index')}}">Diskusi</a></li>
                             <li class="menu-item has-children"><a href="#">Lainnya</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('landing-page.employees.index')}}">Tim Pengembang</a></li>
                                     <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>
-                                    <li><a href="{{route('landing-page.announcements.index')}}">Pengumuman</a></li>
+                                    {{-- <li><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li> --}}
                                     <li><a href="{{route('landing-page.file-public.index')}}">File Publik</a></li>
                                 </ul>
                             </li>
