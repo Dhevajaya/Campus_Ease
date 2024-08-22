@@ -37,7 +37,7 @@ class HomeController extends Controller
 
         $employee = $this->employee;
         $employee = $employee->orderBy("created_at","DESC");
-        $employee = $employee->limit(4);
+        $employee = $employee->limit(7);
         $employee = $employee->get();
 
         $data = [
