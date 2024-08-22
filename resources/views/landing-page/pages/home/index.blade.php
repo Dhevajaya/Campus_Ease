@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="block-style-one block-icon-animate animated-hover-icon mb-40" data-aos="fade-up" data-aos-delay="30">
-                    <h2 class="pb-3">Sambutan Kepala Sekolah</h2>
+                    <h2 class="pb-3">Visi Misi</h2>
                     <div class="row">
                         <div class="col-lg-8">
                             {{ web_settings('web', 'principal_welcome') }}

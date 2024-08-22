@@ -36,8 +36,9 @@
 <section class="contact-information-area pt-120 pb-70">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
-                <div class="text-weapper mb-50">
+            <!-- Informasi Kontak -->
+            <div class="col-lg-6">
+                <div class="text-weapper mb-40">
                     <div class="section-title mb-20">
                         <h2>Hubungi Kami</h2>
                     </div>
@@ -72,8 +73,52 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="contact-form">
+
+            <!-- Form Kontak -->
+            <div class="col-lg-6">
+                <div class="custom-content card">
+                    <form action="{{route('landing-page.contact.store')}}" method="post" autocomplete="off"
+                        onsubmit="confirm('Apakah anda yakin ingin mengirim pesan ini?')"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <div class="row p-3">
+                            <div class="form-group col-lg-6">
+                                <label for="username">Nama</label>
+                                <input type="text" class="form-control border border-dark" id="username"
+                                    placeholder="Masukan Nama Anda" name="name" />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="email2">Email</label>
+                                <input type="email" class="form-control border border-dark" id="email"
+                                    placeholder="Masukan Email Anda" name="email" />
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="username">Gambar</label>
+                                <input type="file" class="form-control border border-dark" accept="image/*"
+                                    id="image" name="image" />
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="username">Subject</label>
+                                <input type="text" class="form-control border border-dark" id="subject"
+                                    placeholder="Masukan Judul" name="subject" />
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="comment">Pesan Anda</label>
+                                <textarea class="form-control border border-dark" id="comment" rows="5" name="message"></textarea>
+                            </div>
+                            <div class="card-action">
+                                <button class="btn" type="submit"
+                                    style="background: #2a2f5b; color:white">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                {{-- <div class="contact-form">
                     <form method="post" action="{{route('landing-page.contact.store')}}" onsubmit="confirm('Apakah anda yakin ingin mengirim data ini?')">
                         @csrf
                         <div class="row">
@@ -99,7 +144,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

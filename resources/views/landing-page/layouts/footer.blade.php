@@ -30,7 +30,7 @@
                                 <li><a href="{{route('landing-page.achievements.index')}}">Prestasi</a></li>
                                 <li><a href="{{route('landing-page.employees.index')}}">Tim Pengembang</a></li>
                                 <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>
-                                <li><a href="{{route('landing-page.file-public.index')}}">File Publik</a></li>
+                                <li><a href="{{route('landing-page.file-public.index')}}">File Pembelajaran</a></li>
                                 <li><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li>
                                 <li><a href="{{route('landing-page.pages.index','privacy-policy')}}">Privacy Policy</a></li>
                                 <li><a href="{{route('landing-page.pages.index','term-and-conditions')}}">Terms and Conditions</a></li>

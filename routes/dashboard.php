@@ -51,7 +51,11 @@ Route::group(['middleware' => ['auth', 'dashboard.access','verified:dashboard.au
 		Route::get('/', 'ProfileController@index')->name("index");
 		Route::put('/', 'ProfileController@update')->name("update");
 	});
-
+	Route::group(["as" => "contact.", "prefix" => "contact"], function () {
+        Route::get("/", "ContactController@index")->name("index");
+        Route::get('/{id}', 'ContactController@show')->name("show");
+        Route::delete('/{id}', 'ContactController@destroy')->name("destroy");
+    });
 	Route::group(["as" => "file-public.","prefix" => "file-public"], function () {
 		Route::get('/', 'FilePublicController@index')->name("index");
 		Route::get('/create', 'FilePublicController@create')->name("create");

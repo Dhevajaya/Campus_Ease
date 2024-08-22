@@ -106,7 +106,7 @@
                 <li>
                     <a href="{{route('dashboard.file-public.index')}}" class="waves-effect">
                         <i class="fa fa-file"></i>
-                        <span> File Publik</span>
+                        <span> File Pembelajaran</span>
                     </a>
                 </li>
                 @endif
@@ -123,6 +123,17 @@
                 </li>
                 @endif
 
+                @if(Auth::user()->hasRole([
+                    \App\Enums\RoleEnum::SUPERADMIN,
+                    \App\Enums\RoleEnum::ADMINISTRATOR,
+                ]))
+                <li>
+                    <a href="{{route('dashboard.contact.index')}}" class="waves-effect">
+                        <i class="fa fa-bullhorn"></i>
+                        <span> Kontak</span>
+                    </a>
+                </li>
+                @endif
                 @if(Auth::user()->hasRole([
                     \App\Enums\RoleEnum::SUPERADMIN,
                     \App\Enums\RoleEnum::ADMINISTRATOR,
