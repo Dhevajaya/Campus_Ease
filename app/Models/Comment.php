@@ -9,15 +9,15 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['body', 'discussion_id', 'user_id'];
-
-    public function discussion()
-    {
-        return $this->belongsTo(Discussion::class);
-    }
+    protected $fillable = ['body', 'user_id', 'discussion_id'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function discussion()
+    {
+        return $this->belongsTo(Discussion::class);
     }
 }

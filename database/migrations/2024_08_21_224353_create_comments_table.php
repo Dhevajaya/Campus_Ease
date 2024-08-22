@@ -12,16 +12,16 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->text('body');
-            $table->foreignId('discussion_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
-        });
-        
-    }
+{
+    Schema::create('comments', function (Blueprint $table) {
+        $table->id();
+        $table->text('body');
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->foreignId('discussion_id')->constrained()->onDelete('cascade');
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.

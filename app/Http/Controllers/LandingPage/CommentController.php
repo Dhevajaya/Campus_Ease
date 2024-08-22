@@ -11,16 +11,16 @@ class CommentController extends Controller
     
     public function store(Request $request, Discussion $discussion)
     {
-        $request->validate([
+        $validated = $request->validate([
             'body' => 'required',
         ]);
 
-        Comment::create([
-            'body' => $request->body,
-            'discussion_id' => $discussion->id,
-            'user_id' => auth()->id(),
-        ]);
+        $comment = new Comment();
+        $comment->body = $validated['body'];
+        $comment->user_id = auth()->id();
+        $comment->discussion_id = $discussion->id;
+        $comment->save();
 
-        return redirect()->route('landing-page.discussions.show', $discussion);
+        return redirect()->route('landing-page.pages.discussions.show', $discussion->id)->with('success', 'Comment added successfully!');
     }
 }
