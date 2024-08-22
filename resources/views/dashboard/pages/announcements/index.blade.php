@@ -40,7 +40,7 @@
                                     <th>Cover</th>
                                     <th>Judul</th>
                                     <th>Slug</th>
-                                    <th>Tanggal Pengumuman</th>
+                                    <th>Tanggal Beasiswa</th>
                                     <th>Tanggal Rilis</th>
                                     <th>Aksi</th>
                                 </thead>

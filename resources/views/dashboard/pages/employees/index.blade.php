@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","Employee")
+@section("title","Tim Pengembang")
 
 @section("css")
 @endsection
@@ -10,11 +10,11 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Employee</a></li>
-                <li class="breadcrumb-item active">Employee</li>
+                <li class="breadcrumb-item"><a href="#">Tim Pengembang</a></li>
+                <li class="breadcrumb-item active">Tim Pengembang</li>
             </ol>
         </div>
-        <h5 class="page-title">Employee</h5>
+        <h5 class="page-title">Tim Pengembang</h5>
     </div>
 </div>
 @endsection

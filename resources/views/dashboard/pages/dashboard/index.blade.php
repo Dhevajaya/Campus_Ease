@@ -38,7 +38,7 @@
             <div class="card-body">
                 <div>
                     <p>
-                        Hi, <b>{{ Auth::user()->name ?? null}}</b>. Selamat datang di aplikasi <b>{{ config('app.name') }}</b>!
+                        Hi, <b>{{ Auth::user()->name ?? null}}</b>. Selamat datang di aplikasi <b>{{ config('website_name') }}</b>!
                     </p>
                     <p>
                         Waktu server saat ini:

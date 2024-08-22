@@ -56,7 +56,7 @@
                 <li>
                     <a href="{{route('dashboard.employees.index')}}" class="waves-effect">
                         <i class="fa fa-university"></i>
-                        <span> Guru</span>
+                        <span> Tim Pengembang</span>
                     </a>
                 </li>
                 @endif

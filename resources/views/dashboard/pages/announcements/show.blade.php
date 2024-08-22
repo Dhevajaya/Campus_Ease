@@ -74,7 +74,7 @@
 
                 <div class="row mb-2">
                     <div class="col-md-3">
-                        Tanggal Pengumuman
+                        Tanggal Beasiswa
                     </div>
                     <div class="col-md-8">
                         : {{ date('d-m-Y',strtotime($result->date)) }}
