@@ -25,6 +25,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="{{route('landing-page.employees.index')}}">Tim Pengembang</a></li>
                                     <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>
+                                    <li><a href="https://simulasi-tes.bppp.kemdikbud.go.id">Test Simulasi</a></li>
                                     {{-- <li><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li> --}}
                                     <li><a href="{{route('landing-page.file-public.index')}}">File Pembelajaran</a></li>
                                 </ul>
