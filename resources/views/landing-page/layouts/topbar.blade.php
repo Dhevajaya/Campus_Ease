@@ -19,6 +19,7 @@
                             <li class="menu-item"><a href="{{route('landing-page.home.index')}}">Home</a></li>
                             <li class="menu-item"><a href="{{route('landing-page.daftaruniversitas.index')}}">Daftar Universitas</a></li>
                             <li class="menu-item"><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li>
+                            <li><a href="{{route('landing-page.file-public.index')}}">File Pembelajaran</a></li>
                             {{-- <li class="menu-item"><a href="{{route('landing-page.achievements.index')}}">Cari Universitas</a></li> --}}
                             <li class="menu-item"><a href="{{route('landing-page.contact.index')}}">Hubungi Kami</a></li>
                             <li class="menu-item has-children"><a href="#">Lainnya</a>
@@ -27,13 +28,13 @@
                                     <li><a href="{{route('landing-page.faq.index')}}">Faq</a></li>
                                     <li><a href="https://simulasi-tes.bppp.kemdikbud.go.id">Test Simulasi</a></li>
                                     {{-- <li><a href="{{route('landing-page.announcements.index')}}">Beasiswa</a></li> --}}
-                                    <li><a href="{{route('landing-page.file-public.index')}}">File Pembelajaran</a></li>
+                                    
                                 </ul>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="header-right-nav">
+                {{-- <div class="header-right-nav">
                     <ul class="d-inline-flex align-items-center">
                         @if(!Auth::check())
                         <li class="nav-button"><a href="{{route('dashboard.auth.login.index')}}" class="main-btn bordered-btn">Login</a></li>
@@ -48,7 +49,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

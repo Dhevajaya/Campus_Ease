@@ -21,6 +21,7 @@ class CommentController extends Controller
         $comment->discussion_id = $discussion->id;
         $comment->save();
 
-        return redirect()->route('landing-page.pages.discussions.show', $discussion->id)->with('success', 'Comment added successfully!');
+        return redirect()->route('landing-page.discussions.show', $discussion->id)->with('success', 'Comment added successfully!');
     }
+    
 }
