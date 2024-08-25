@@ -1,6 +1,6 @@
 @extends("landing-page.layouts.main")
 
-@section("title","File Pembelajaran")
+@section("title","Pembelajaran")
 
 @section("css")
 @endsection
@@ -21,10 +21,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="page-title-text text-center">
-                        <h1 class="title">File Pembelajaran</h1>
+                        <h1 class="title">Pembelajaran</h1>
                         <ul class="breadcrumbs-link">
                             <li><a href="{{route('landing-page.home.index')}}">Beranda</a></li>
-                            <li class="active">File Pembelajaran</li>
+                            <li class="active">Pembelajaran</li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-center py-5">File Pembelajaran</h3>
+                <h3 class="text-center py-5">Pembelajaran</h3>
                 <div class="table-responsive">
                     <table class="table mb-3">
                         <thead>

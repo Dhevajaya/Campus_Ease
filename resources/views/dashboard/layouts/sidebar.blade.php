@@ -106,7 +106,7 @@
                 <li>
                     <a href="{{route('dashboard.file-public.index')}}" class="waves-effect">
                         <i class="fa fa-file"></i>
-                        <span> File Pembelajaran</span>
+                        <span> Pembelajaran</span>
                     </a>
                 </li>
                 @endif

@@ -1,6 +1,6 @@
 @extends("dashboard.layouts.main")
 
-@section("title","File Pembelajaran")
+@section("title","Pembelajaran")
 
 @section("css")
 @endsection
@@ -10,12 +10,12 @@
     <div class="col-sm-12">
         <div class="float-right page-breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">File Pembelajaran</a></li>
+                <li class="breadcrumb-item"><a href="#">Pembelajaran</a></li>
                 <li class="breadcrumb-item">Show</li>
                 <li class="breadcrumb-item active">{{$result->id}}</li>
             </ol>
         </div>
-        <h5 class="page-title">File Pembelajaran</h5>
+        <h5 class="page-title">Pembelajaran</h5>
     </div>
 </div>
 @endsection
