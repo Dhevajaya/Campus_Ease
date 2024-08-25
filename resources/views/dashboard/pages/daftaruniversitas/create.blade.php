@@ -37,6 +37,13 @@
                                 </div>
                             </div>
                          
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label">Provinsi <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="province" placeholder="Provinsi"  value="{{old('province')}}" required>
+                                </div>
+                            </div>
+
                             <div class="form-group row mb-5">
                                 <label class="col-md-2 col-form-label" for="description">Deskripsi <span
                                         class="text-danger">*</span></label>

@@ -35,6 +35,28 @@
 
 <section class="features-area pb-90 mt-5">
     <div class="container">
+        <!-- Form Filter Provinsi -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8">
+                <form method="GET" action="{{ route('landing-page.daftaruniversitas.index') }}">
+                    <div class="form-group">
+                        <label for="province">Filter Berdasarkan Provinsi:</label>
+                        <select name="province" id="province" class="form-control">
+                            <option value="">Semua Provinsi</option>
+                            @foreach($provinces as $prov)
+                                <option value="{{ $prov->province }}" {{ request()->province == $prov->province ? 'selected' : '' }}>
+                                    {{ $prov->province }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <div class="row justify-content-center">
             @foreach ($table as $index => $row)
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -42,13 +64,17 @@
                     <a class="image-popup" href="{{asset('storage/'.$row->image)}}" style="width: 100%;height:200px;">
                         <img src="{{asset('storage/'.$row->image)}}" alt="{{$row->title}}" style="width: 100%;height:100%;">
                     </a>
-                    <a href="{{route('landing-page.daftaruniversitas.show', $row->id)}}"> <p class="text-center mt-1">{{$row->title}}</p></a>
+                    <a href="{{route('landing-page.daftaruniversitas.show', $row->id)}}"> 
+                        <p class="text-center mt-1">{{$row->title}}</p>
+                    </a>
+                    <p class="text-center mt-1">{{$row->province}}</p>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+
 @endsection
 
 @section("scrolltop")

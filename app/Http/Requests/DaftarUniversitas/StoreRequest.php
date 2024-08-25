@@ -19,6 +19,11 @@ class StoreRequest extends FormRequest
                 'max:2048',
                 'mimes:jpeg,bmp,png,gif,svg,jpg',
             ],
+            'province' => [
+                'required',
+                'string',
+                'max:255',
+            ],
             'daftaruniversitas-trixFields' => [
                 'required',
                 'array',
@@ -34,6 +39,7 @@ class StoreRequest extends FormRequest
             'description.required' => 'Deksripsi harus diisi',
             'image.required' => 'File harus diisi',
             'image.image' => 'Foto harus berupa gambar',
+            'province' => 'required|string|max:255',
             'image.mimes' => 'Foto harus berupa jpeg, bmp, png, gif, svg , jpg',
             'image.max' => 'Foto tidak boleh lebih dari 2MB',
         ];

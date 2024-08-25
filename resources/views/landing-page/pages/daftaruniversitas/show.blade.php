@@ -76,6 +76,7 @@
                     </div>
                     <div class="flex-1 ms-3 pt-1">
                         <a href="{{ route('landing-page.daftaruniversitas.show', $row->id) }}"><h6 class="text-uppercase fw-bold mb-1">{{ $row->title }}</h6></a>
+                        <p class="text-center mt-1">{{$row->title}}</p>
                     </div>
                    
                 </div>

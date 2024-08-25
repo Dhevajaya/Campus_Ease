@@ -18,6 +18,11 @@ class UpdateRequest extends FormRequest
                 'max:2048',
                 'mimes:jpeg,bmp,png,gif,svg,jpg',
             ],
+            'province' => [
+                'required',
+                'string',
+                'max:255',
+            ],
             'daftaruniversitas-trixFields' => [
                 'required',
                 'array',
@@ -31,6 +36,7 @@ class UpdateRequest extends FormRequest
             'title.required' => 'Judul harus diisi',
             'description.required' => 'Deksripsi harus diisi',
             'image.image' => 'Foto harus berupa gambar',
+            'province' => 'required|string|max:255',
             'image.mimes' => 'Foto harus berupa jpeg, bmp, png, gif, svg , jpg',
             'image.max' => 'Foto tidak boleh lebih dari 2MB',
         ];
@@ -45,7 +51,7 @@ class UpdateRequest extends FormRequest
     {
         if (! $this->wantsJson()) {
             $errors = implode('<br>', $validator->errors()->all());
-            alert()->html('Gagal',$errors,'error');
+            alert()->html('Gagal', $errors, 'error');
             $this->redirect = route('dashboard.daftaruniversitas.edit', request()->route()->parameter('id'));
         }
 

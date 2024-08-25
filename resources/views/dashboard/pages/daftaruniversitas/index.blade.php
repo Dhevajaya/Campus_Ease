@@ -38,6 +38,7 @@
                                 <thead>
                                     <th>No</th>
                                     <th>Judul</th>
+                                    <th>Provinsi</th>
                                     <th>Image</th>
                                     <th>Dibuat Pada</th>
                                     <th>Aksi</th>
@@ -47,6 +48,7 @@
                                     <tr>
                                         <td>{{$table->firstItem() + $index}}</td>
                                         <td>{{$row->title}}</td>
+                                        <td>{{$row->province}}</td>
                                         <td>
                                             <img src="{{ asset('storage/'.$row->image) }}" alt="" style="width: 80px;height:80px;">
                                         </td>

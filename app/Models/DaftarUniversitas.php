@@ -40,6 +40,7 @@ class DaftarUniversitas extends Model
     protected $fillable = [
         'user_id',
         'title',
+        'province',
         'image',
         'daftaruniversitas-trixFields',
     ];

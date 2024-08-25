@@ -80,6 +80,7 @@ class DaftarUniversitasController extends Controller
             $create = $this->daftaruniversitas->create([
                 'title' => $title,
                 'image' => $image,
+                'province' => $request->province,
                 'daftaruniversitas-trixFields' => $request->input('daftaruniversitas-trixFields'),
             ]);
 
@@ -179,6 +180,7 @@ class DaftarUniversitasController extends Controller
             $result->update([
                 'title' => $title,
                 'image' => $image,
+                'province' => $request->province,
                 'daftaruniversitas-trixFields' => $request->input('daftaruniversitas-trixFields'),
             ]);
 

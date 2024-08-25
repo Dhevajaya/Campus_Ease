@@ -36,6 +36,14 @@
                     </div>
                 </div>
 
+                <div class="col-md-3">
+                    Provinsi
+                </div>
+                <div class="col-md-8">
+                    : {{$result->province}}
+                </div>
+            </div>
+
                 <div class="row mb-2">
                     <div class="col-md-3">
                         Deskripsi
